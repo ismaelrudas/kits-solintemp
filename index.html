@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" data-v="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kits corporativos · Solintemp</title>
+<meta name="description" content="Tres kits listos para regalar a tu equipo o a tus clientes. Cotiza por WhatsApp con Solintemp.">
+<link rel="icon" href="img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<!-- [PENDIENTE] Píxel de Meta: pegar aquí el código del píxel de la cuenta publicitaria de Solintemp. -->
+<style>
+/* VOICE: B2B campaign landing, confident and concrete: what the kit is, how to quote. No adjectives doing the selling.
+   IDEA: a Caribbean craft-market price board: the quote console is the hero; the kits answer it below, one large photo each.
+   PICTURE: the selected kit's photo inside the console, then three large kit plates.
+   COLOUR and TYPE: Arena y barro (approved 20 nov 2026): sand #F2E8D8, terracotta #B8472A (buttons; #9A3A21 for small text), mangrove green #1F4A3B, ink #1C1714. Navy logo on sand. Archivo + Instrument Sans + Plex Mono for figures.
+   LAYOUT: header, hero (headline + console), kits, three steps on mangrove, footer; sticky WhatsApp bar on phones. */
+:root{--bg:#F2E8D8;--card:#FBF6EE;--ink:#1C1714;--soft:#5A4A3F;--clay:#B8472A;--clay-text:#9A3A21;--mangle:#1F4A3B;--cream:#FFF8EF;--line:rgba(28,23,20,.14);color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Instrument Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,18px)}
+header{position:sticky;top:0;z-index:5;background:rgba(242,232,216,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+header img{height:30px;width:auto;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:10px;border:0;background:var(--clay);color:var(--cream);font:700 16px "Archivo",sans-serif;text-decoration:none;cursor:pointer;letter-spacing:.01em}
+.btn:hover{background:#A33E24}.btn:focus-visible,input:focus-visible,select:focus-visible,.tile:focus-within{outline:3px solid var(--ink);outline-offset:2px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(28,23,20,.3)}
+.btn.ghost:hover{background:rgba(28,23,20,.05)}
+header .btn{min-height:42px;padding:8px 16px;font-size:15px}
+.hero{padding:clamp(32px,6vw,72px) 0 clamp(40px,6vw,80px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+h1{font:800 clamp(34px,5vw,54px)/1.04 "Archivo",sans-serif;margin:0 0 18px;text-wrap:balance}
+h2{font:800 clamp(28px,3.4vw,40px)/1.08 "Archivo",sans-serif;margin:0 0 10px;text-wrap:balance}
+h3{font:700 24px/1.15 "Archivo",sans-serif;margin:0}
+.lede{color:var(--soft);font-size:19px;max-width:46ch;margin:0 0 22px}
+.console{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 50px rgba(92,60,30,.16)}
+.console .shot{aspect-ratio:3/2;background:#E6D9C4;position:relative}
+.console .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.console .shot span{position:absolute;left:14px;bottom:12px;background:rgba(28,23,20,.8);color:var(--cream);padding:6px 12px;border-radius:8px;font:700 15px "Archivo",sans-serif}
+.console form{padding:18px;display:grid;gap:14px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border:0;margin:0;padding:0}
+.tiles legend,.field label{font-size:14px;color:var(--soft);margin-bottom:6px;padding:0}
+.tile{position:relative;border:1px solid var(--line);border-radius:10px;padding:10px;cursor:pointer;background:#fff;min-height:48px}
+.tile input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.tile b{display:block;font:700 15px/1.2 "Archivo",sans-serif}
+.tile small{color:var(--soft);font-size:13px;white-space:nowrap}
+.tile:has(input:checked){border-color:var(--clay);box-shadow:inset 0 0 0 1px var(--clay);background:#FBEDE6}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.field{display:grid}
+input[type=number],input[type=month],select{font:500 16px "Instrument Sans",sans-serif;min-height:48px;border-radius:10px;border:1px solid rgba(28,23,20,.22);background:#fff;color:var(--ink);padding:10px 12px;width:100%}
+.price{font:500 15px "IBM Plex Mono",monospace;color:var(--clay-text)}
+.fine{font-size:13px;color:var(--soft);margin:0}
+.pend{display:inline-block;font:600 12px "Instrument Sans",sans-serif;background:#ffe08a;color:#3b2a00;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+section{padding:clamp(48px,7vw,96px) 0}
+.kits{display:grid;gap:clamp(40px,6vw,72px);margin-top:36px}
+.kit{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center}
+.kit:nth-child(even) .pic{order:2}
+.pic{background:#E6D9C4;border-radius:16px;overflow:hidden;aspect-ratio:3/2}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.kit .use{color:var(--clay-text);font:600 15px "Instrument Sans",sans-serif;margin:6px 0 14px}
+.kit ul{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:8px}
+.kit li{padding-left:22px;position:relative}.kit li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--clay)}
+.kit .from{margin:0 0 16px}.kit .from strong{font:800 28px "Archivo",sans-serif;color:var(--ink)}
+.steps{background:var(--mangle);color:var(--bg)}
+.steps ol{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{background:rgba(255,255,255,.07);border-radius:14px;padding:22px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--bg);color:var(--mangle);font:800 18px "Archivo",sans-serif;margin-bottom:12px}
+.steps b{font:700 19px "Archivo",sans-serif;display:block;margin-bottom:4px}
+.steps p{margin:0;color:#D9CCB8}
+footer{padding:36px 0 110px;border-top:1px solid var(--line);color:var(--soft);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer img{height:26px;width:auto}
+.kit .acts{display:flex;flex-wrap:wrap;gap:10px}
+dialog.det{width:min(980px,94vw);max-height:92vh;padding:0;border:0;border-radius:18px;background:var(--bg);color:var(--ink);box-shadow:0 30px 80px rgba(28,23,20,.35)}
+dialog.det::backdrop{background:rgba(28,23,20,.55)}
+.det-h{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:rgba(242,232,216,.97);border-bottom:1px solid var(--line)}
+.det-h p{margin:2px 0 0;color:var(--clay-text);font-weight:600;font-size:15px}
+.x{width:48px;height:48px;flex:none;border-radius:50%;border:1px solid rgba(28,23,20,.25);background:var(--card);font:400 26px/1 sans-serif;color:var(--ink);cursor:pointer}
+.x:focus-visible,.th:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.det-b{padding:8px 22px 4px}
+.prod{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.prod:last-child{border-bottom:0}
+.gal .main{background:#fff;border-radius:12px;aspect-ratio:1;overflow:hidden;display:grid;place-items:center}
+.gal .main img{width:100%;height:100%;object-fit:contain;display:block}
+.ths{display:flex;gap:8px;margin-top:8px}
+.th{width:56px;height:56px;padding:0;border-radius:8px;border:1px solid var(--line);background:#fff;overflow:hidden;cursor:pointer}
+.th img{width:100%;height:100%;object-fit:contain;display:block}
+.th[aria-current=true]{border-color:var(--clay);box-shadow:inset 0 0 0 1px var(--clay)}
+.prod h4{font:700 21px/1.2 "Archivo",sans-serif;margin:0 0 8px}
+.prod p{margin:0 0 10px}
+.prod dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;margin:0;font-size:15px}
+.prod dt{color:var(--soft)}.prod dd{margin:0}
+.ojo{background:#F6DCCF;border-left:4px solid var(--clay);border-radius:8px;padding:10px 14px;font-weight:600;color:#5c2414}
+.det-f{position:sticky;bottom:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;background:rgba(242,232,216,.97);border-top:1px solid var(--line)}
+.det-f .fine{max-width:52ch}
+@media(max-width:700px){dialog.det{width:100vw;max-width:100vw;max-height:100dvh;height:100dvh;border-radius:0;margin:0}.prod{grid-template-columns:minmax(0,1fr)}.det-f .btn{width:100%}}
+.bar{display:none}
+@media(max-width:860px){.hero .wrap,.kit{grid-template-columns:minmax(0,1fr)}.kit:nth-child(even) .pic{order:0}.steps ol{grid-template-columns:minmax(0,1fr)}
+ .bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:6;padding:10px max(4vw,12px) calc(10px + env(safe-area-inset-bottom));background:rgba(242,232,216,.97);border-top:1px solid var(--line)}.bar .btn{width:100%}
+ header .btn{display:none}}
+@media(max-width:420px){.tiles{grid-template-columns:minmax(0,1fr)}.tile{display:flex;justify-content:space-between;align-items:center}.row{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:no-preference){.console .shot img{transition:opacity .25s}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><img src="img/logo-color.png" alt="Solintemp" width="260" height="53"><a class="btn" id="top-wa" href="#cotiza">Cotiza tu proyecto</a></div></header>
+<main>
+<div class="hero" id="cotiza"><div class="wrap">
+ <div>
+  <h1>Dinos cuántos son. Nosotros armamos los kits.</h1>
+  <p class="lede">Tres kits listos para regalar a tu equipo o a tus clientes, con el logo de tu empresa. Elige uno, dinos cuántos necesitas y te enviamos la cotización por WhatsApp.</p>
+  <a class="btn ghost" href="#kits">Ver qué trae cada kit</a>
+ </div>
+ <div class="console">
+  <div class="shot"><img id="shot" src="" alt=""><span id="shot-name"></span></div>
+  <form id="f" novalidate>
+   <fieldset class="tiles" id="tiles"><legend>1. Elige el kit</legend></fieldset>
+   <div class="row">
+    <div class="field"><label for="n">2. ¿Cuántos son?</label><input id="n" type="number" min="1" step="1" inputmode="numeric" placeholder="Ej. 80"></div>
+    <div class="field"><label for="m">3. ¿Para cuándo?</label><select id="m"></select></div>
+   </div>
+   <button class="btn" type="submit">Cotiza tu proyecto por WhatsApp</button>
+   <p class="fine" id="price-note"></p>
+  </form>
+ </div>
+</div></div>
+<section id="kits"><div class="wrap">
+ <h2>Qué trae cada kit</h2>
+ <p class="lede" style="margin:0">Todos se personalizan con el logo de tu empresa. La técnica y el costo de la personalización se definen en la cotización.</p>
+ <div class="kits" id="kitlist"></div>
+</div></section>
+<section class="steps"><div class="wrap">
+ <h2>Así cotizas</h2>
+ <ol>
+  <li><b>Elige el kit</b><p>Uno de los tres, o cuéntanos qué cambiarías.</p></li>
+  <li><b>Dinos cuántos son y para cuándo</b><p>Con la cantidad y la fecha te decimos qué hay disponible.</p></li>
+  <li><b>Recibe tu cotización</b><p>Te la enviamos por WhatsApp, con tu logo aplicado en cada pieza.</p></li>
+ </ol>
+</div></section>
+</main>
+<footer><div class="wrap">
+ <div><img src="img/logo-color.png" alt="Solintemp" width="200" height="41"><p style="margin:10px 0 0">WhatsApp: <span id="tel"></span></p></div>
+ <p style="max-width:52ch;margin:0">Fotografías de referencia. Colores, cantidades disponibles y personalización se confirman en la cotización.</p>
+</div></footer>
+<dialog class="det" id="det" aria-labelledby="det-t">
+ <div class="det-h"><div><h3 id="det-t"></h3><p id="det-p"></p></div><button class="x" type="button" id="det-x" aria-label="Cerrar">×</button></div>
+ <div class="det-b" id="det-b"></div>
+ <div class="det-f"><p class="fine">Fotos del producto sin personalizar. Colores y cantidades disponibles se confirman en la cotización.</p><button class="btn" type="button" id="det-c">Cotizar este kit</button></div>
+</dialog>
+<div class="bar"><a class="btn" href="#cotiza" id="bar-btn">Cotiza tu proyecto</a></div>
+<script>
+{
+const CONFIG = {"whatsapp": "573018654741", "whatsappVisible": "+57 301 865 4741", "ref": "KITS", "preciosAprobados": true, "notaPrecio": "Referencia para 100 kits, sin personalización.", "variantes": {"a": [{"id": "bienvenida", "nombre": "Kit Bienvenida", "para": "Para el primer día de tu nuevo equipo", "productos": ["Termo de aluminio de 700 ml", "Libreta de tapa dura", "Bolígrafo", "Bolsa ecológica con estampado a todo color"], "detalle": [{"nombre": "Termo de aluminio de 700 ml", "texto": "Botilito metálico con tapa y pitillo.", "medidas": "24 × 7,2 cm de diámetro", "logo": "Logo de 5 cm, en tampografía o láser", "nota": null, "fotos": ["MU-206_1.jpg", "MU-206_2.jpg"]}, {"nombre": "Libreta de tapa dura", "texto": "Cubierta en poliéster reciclado de botellas plásticas, 80 hojas color crema con rayas.", "medidas": "21 × 14 cm", "logo": "Logo de 5,5 cm, en screen", "nota": null, "fotos": ["OF-600_1.jpg", "OF-600_2.jpg"]}, {"nombre": "Bolígrafo", "texto": "Bolígrafo plástico, disponible en 10 colores.", "medidas": "14 cm", "logo": "Logo de 5 cm, en tampografía", "nota": null, "fotos": ["SUMMIT-BO_1.jpg", "SUMMIT-BO_2.jpg"]}, {"nombre": "Bolsa ecológica estampada", "texto": "Bolsa en cambrel de 80 g con manijas. Resiste hasta 6 kg.", "medidas": "38 × 40 cm, manijas de 30 cm", "logo": "Diseño a todo color de hasta 30 × 30 cm, en sublimación", "nota": "Se estampa a todo color: puedes poner una ilustración completa, no solo el logo.", "fotos": ["VA-404-1_1.jpg", "VA-404-1_2.jpg"]}], "desde": 47000}, {"id": "navidad", "nombre": "Kit Fin de Año", "para": "Para cerrar el año con tu equipo y tus clientes", "productos": ["Set de 2 mugs metálicos en caja de regalo", "Tabla de quesos en bambú con sus utensilios"], "detalle": [{"nombre": "Set de 2 mugs metálicos", "texto": "Doble pared al vacío en acero inoxidable, con el interior recubierto en cerámica. Mantienen la bebida fría o caliente unas 6 horas. Vienen en caja individual.", "medidas": "7,5 × 7 cm de diámetro (200 ml)", "logo": "Logo de 3 cm, en tampografía o láser", "nota": null, "fotos": ["MU-410_1.jpg", "MU-410_2.jpg", "MU-410_4.jpg"]}, {"nombre": "Tabla de quesos en bambú", "texto": "Tabla redonda para cortar y servir, con 3 utensilios para queso. Viene en caja individual.", "medidas": "18,5 cm de diámetro × 3,5 cm", "logo": "Logo de 7 cm, en láser", "nota": "La tabla es también el estuche: se abre y adentro guarda los 3 utensilios.", "fotos": ["HO-413_2.jpg", "HO-413_4.jpg", "HO-413_3.jpg"]}], "desde": 154000}, {"id": "vip", "nombre": "Kit VIP", "para": "Para directivos y clientes clave", "productos": ["Morral antirrobo", "Libreta ejecutiva", "Portatarjetas para celular"], "detalle": [{"nombre": "Morral antirrobo", "texto": "Cremallera principal oculta, compartimento para portátil de 14\", dos bolsillos internos, línea reflectiva al frente y tirantes y espaldar semiacolchados.", "medidas": "42 × 31 × 9 cm", "logo": "Logo de 12 cm, en screen", "nota": "La cremallera va contra la espalda: nadie la abre sin que te des cuenta.", "fotos": ["VA-939-1_1.jpg", "VA-939-1_2.jpg", "VA-939-1_3.jpg"]}, {"nombre": "Libreta ejecutiva", "texto": "Tapa en poliuretano, 96 hojas con rayas.", "medidas": "21,1 × 14,5 cm", "logo": "Logo de 6 cm, en tampografía", "nota": null, "fotos": ["OF-741_1.jpg", "OF-741_2.jpg"]}, {"nombre": "Portatarjetas para celular", "texto": "De silicona, con adhesivo para pegarlo al respaldo del celular.", "medidas": "8,5 × 5,8 cm", "logo": "Logo de 2 cm, a una tinta", "nota": null, "fotos": ["TE-722_1.jpg", "TE-722_2.jpg"]}], "desde": 143000}], "b": [{"id": "carnaval", "nombre": "Kit Carnaval", "para": "Para la fiesta de Carnaval de tu empresa", "productos": ["Gorra estampada", "Cuello multifuncional estampado", "Vuvuzela", "Libreta"], "detalle": [{"nombre": "Gorra estampada", "texto": "Gorra trucker de 5 paneles: frente en espuma, malla atrás y cierre a presión.", "medidas": "Talla única ajustable", "logo": "Bordado o screen; a todo color en las gorras de frente blanco", "nota": null, "fotos": ["CAP-22_1.jpg", "CAP-22_2.jpg", "CAP-22_3.jpg"]}, {"nombre": "Cuello multifuncional estampado", "texto": "Tubular, en poliéster y sin costuras. Se usa como bufanda, pañoleta o banda para el cabello.", "medidas": "50 × 24,5 cm", "logo": "Estampado completo a todo color, en sublimación", "nota": null, "fotos": ["CP-204_1.jpg", "CP-204_2.jpg", "CP-204_3.jpg"]}, {"nombre": "Vuvuzela", "texto": "Fabricada en Colombia, con cordón. En amarillo, azul, rojo o tricolor.", "medidas": "10,5 cm × 4 cm de diámetro", "logo": "Logo de 3 cm, en tampografía", "nota": null, "fotos": ["VA-444_1.jpg", "VA-444_2.jpg"]}, {"nombre": "Libreta", "texto": "Libreta argollada de 80 hojas con rayas y cubierta en polipropileno con diseño de balón.", "medidas": "14 × 17,7 cm", "logo": "Logo de 4,5 cm, en tampografía", "nota": null, "fotos": ["OF-501_1.jpg"]}], "desde": 36000}, {"id": "caribe", "nombre": "Kit Caribe", "para": "Para integraciones, convenciones y eventos al aire libre", "productos": ["Gorra estampada", "Visera estampada", "Cuello multifuncional", "Frisbee"], "detalle": [{"nombre": "Gorra estampada", "texto": "Gorra trucker de 5 paneles: frente en espuma, malla atrás y cierre a presión.", "medidas": "Talla única ajustable", "logo": "Bordado o screen; a todo color en las gorras de frente blanco", "nota": null, "fotos": ["CAP-22_1.jpg", "CAP-22_2.jpg", "CAP-22_3.jpg"]}, {"nombre": "Visera estampada", "texto": "Frente en espuma, banda en malla y cierre a presión.", "medidas": "Talla única ajustable", "logo": "Bordado o screen; a todo color en el frente blanco", "nota": null, "fotos": ["CAP-33_1.jpg", "CAP-33_2.jpg"]}, {"nombre": "Cuello multifuncional", "texto": "Tubular, en poliéster y sin costuras. Se usa como bufanda, pañoleta o banda para el cabello.", "medidas": "50 × 24,5 cm", "logo": "Estampado completo a todo color, en sublimación", "nota": null, "fotos": ["CP-204_1.jpg", "CP-204_2.jpg", "CP-204_3.jpg"]}, {"nombre": "Frisbee", "texto": "Fabricado en Colombia, en polipropileno. Seis colores.", "medidas": "23 cm de diámetro", "logo": "Logo de 13 cm, en screen o etiqueta a todo color", "nota": null, "fotos": ["JU-72_1.jpg", "JU-72_2.jpg"]}], "desde": 42000}, {"id": "hogar", "nombre": "Kit Hogar", "para": "Un detalle útil para la casa de tu equipo", "productos": ["Libreta de corcho", "Set de escritorio", "Portavasos de bambú con bolsa", "Destapador de madera", "Linterna llavero"], "detalle": [{"nombre": "Libreta de corcho", "texto": "Cubierta en corcho con cierre elástico y placa de bambú, 80 hojas de papel natural con rayas.", "medidas": "21 × 14,5 cm", "logo": "Logo en láser sobre la placa de bambú, o de 5,5 cm en tampografía", "nota": null, "fotos": ["OF-672_1.jpg", "OF-672_2.jpg"]}, {"nombre": "Set de escritorio", "texto": "Estuche octagonal con dispensador de cinta, tijeras, cosedora y ganchos.", "medidas": "8 × 8 × 2 cm", "logo": "Logo de 3 cm, en tampografía", "nota": "Todo cabe en un estuche de 8 cm que queda sobre el escritorio.", "fotos": ["OF-473_1.jpg", "OF-473_2.jpg"]}, {"nombre": "Portavasos de bambú con bolsa", "texto": "Set de 4 portavasos de bambú con antideslizante, guardados en una bolsa de algodón.", "medidas": "8,5 cm de diámetro cada uno", "logo": "Logo de 4 cm, en láser", "nota": null, "fotos": ["HO-422_1.jpg", "HO-422_2.jpg"]}, {"nombre": "Destapador de madera", "texto": "Acero inoxidable con mango de madera.", "medidas": "14,4 × 4 cm", "logo": "Logo de 6 cm, en láser", "nota": null, "fotos": ["HO-329_1.jpg", "HO-329_2.jpg"]}, {"nombre": "Linterna llavero", "texto": "Mini linterna LED con cubierta de bambú y argolla para llaves.", "medidas": "6,5 cm × 1,5 cm de diámetro", "logo": "Logo de 3,5 cm, en láser", "nota": null, "fotos": ["IL-144_1.jpg", "IL-144_2.jpg"]}], "desde": 52000}]}, "raiz": ""};
+const v = (document.documentElement.dataset.v || location.hash.slice(1) || 'a').toLowerCase() === 'b' ? 'b' : 'a';
+const kits = CONFIG.variantes[v];
+const $ = (s) => document.querySelector(s);
+const money = (n) => '$' + Number(n).toLocaleString('es-CO');
+const pend = CONFIG.preciosAprobados ? '' : '<span class="pend">precio por aprobar</span>';
+$('#tel').textContent = CONFIG.whatsappVisible;
+$('#tiles').insertAdjacentHTML('beforeend', kits.map((k, i) => `<label class="tile"><input type="radio" name="kit" value="${k.id}" ${i === 0 ? 'checked' : ''}><b>${k.nombre}</b><small>desde ${money(k.desde)}</small></label>`).join(''));
+$('#kitlist').innerHTML = kits.map((k) => `<article class="kit" id="kit-${k.id}">
+ <div class="pic"><img src="${CONFIG.raiz}img/${k.id}.jpg" alt="${k.nombre}: ${k.productos.join(', ')}" loading="lazy" width="1400" height="939"></div>
+ <div><h3>${k.nombre}</h3><p class="use">${k.para}</p><ul>${k.productos.map((p) => `<li>${p}</li>`).join('')}</ul>
+ <p class="from">Desde <strong>${money(k.desde)}</strong> + IVA por kit${pend}<br><span class="fine">${CONFIG.notaPrecio}</span></p>
+ <div class="acts"><button class="btn" type="button" data-pick="${k.id}">Cotizar este kit</button><button class="btn ghost" type="button" data-ver="${k.id}">Ver los ${k.detalle.length} productos</button></div></div></article>`).join('');
+const months = new Intl.DateTimeFormat('es-CO', { month: 'long', year: 'numeric' });
+const now = new Date();
+$('#m').innerHTML = '<option value="">Elige el mes</option>' + Array.from({ length: 6 }, (_, i) => { const d = new Date(now.getFullYear(), now.getMonth() + i, 1); const t = months.format(d); return `<option>${t}</option>`; }).join('');
+const current = () => kits.find((k) => k.id === (document.querySelector('input[name=kit]:checked')?.value)) || kits[0];
+function show() {
+  const k = current();
+  $('#shot').src = `${CONFIG.raiz}img/${k.id}.jpg`; $('#shot').alt = `${k.nombre}: ${k.productos.join(', ')}`;
+  $('#shot-name').textContent = k.nombre;
+  $('#price-note').innerHTML = `Desde ${money(k.desde)} + IVA por kit${pend}. ${CONFIG.notaPrecio}`;
+}
+$('#tiles').addEventListener('change', show);
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const det = $('#det'); let detKit = null;
+function ver(id) {
+  const k = kits.find((x) => x.id === id); detKit = k;
+  $('#det-t').textContent = `${k.nombre}: qué trae`; $('#det-p').textContent = k.para;
+  $('#det-b').innerHTML = k.detalle.map((d, i) => `<article class="prod">
+   <div class="gal"><div class="main"><img src="${CONFIG.raiz}img/prod/${d.fotos[0]}" alt="${esc(d.nombre)}" loading="lazy" width="800" height="800"></div>
+   ${d.fotos.length > 1 ? `<div class="ths">${d.fotos.map((f, j) => `<button class="th" type="button" data-f="${f}" aria-label="Foto ${j + 1} de ${esc(d.nombre)}" aria-current="${j === 0}"><img src="${CONFIG.raiz}img/prod/${f}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}</div>
+   <div><h4>${esc(d.nombre)}</h4><p>${esc(d.texto)}</p>${d.nota ? `<p class="ojo">${esc(d.nota)}</p>` : ''}
+   <dl><dt>Medidas</dt><dd>${esc(d.medidas)}</dd><dt>Tu logo</dt><dd>${esc(d.logo)}</dd></dl></div></article>`).join('');
+  det.showModal(); $('#det-b').scrollTop = 0; det.scrollTop = 0;
+  if (window.fbq) window.fbq('track', 'ViewContent', { content_name: k.nombre, variant: v });
+}
+$('#det-b').addEventListener('click', (e) => {
+  const t = e.target.closest('.th'); if (!t) return;
+  const g = t.closest('.gal'); g.querySelector('.main img').src = `${CONFIG.raiz}img/prod/${t.dataset.f}`;
+  g.querySelectorAll('.th').forEach((b) => b.setAttribute('aria-current', b === t));
+});
+$('#det-x').addEventListener('click', () => det.close());
+det.addEventListener('click', (e) => { if (e.target === det) det.close(); });
+$('#det-c').addEventListener('click', () => { det.close(); pick(detKit.id); });
+function pick(id) {
+  document.querySelector(`input[name=kit][value="${id}"]`).checked = true; show();
+  $('#cotiza').scrollIntoView(); setTimeout(() => $('#n').focus({ preventScroll: true }), 400);
+}
+$('#kitlist').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-pick]'); if (b) return pick(b.dataset.pick);
+  const w = e.target.closest('[data-ver]'); if (w) ver(w.dataset.ver);
+});
+$('#f').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const k = current(); const n = Math.floor(Number($('#n').value)); const m = $('#m').value;
+  const lines = [`Hola Solintemp, quiero cotizar el ${k.nombre}.`, n > 0 ? `Cantidad: ${n} kits.` : 'Cantidad: por definir.', m ? `Para: ${m}.` : null, `(Ref. ${CONFIG.ref}-${v.toUpperCase()})`].filter(Boolean);
+  if (window.fbq) window.fbq('track', 'Contact', { content_name: k.nombre, variant: v });
+  window.location.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
+});
+show();
+if (!document.documentElement.dataset.v) window.addEventListener('hashchange', () => location.reload());
+}
+</script>
+</body>
+</html>
